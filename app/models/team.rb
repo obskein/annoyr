@@ -2,12 +2,12 @@ class Team < ActiveRecord::Base
   has_many :team_members
   has_many :people, :through => :team_members
 
+  validates :name, :presence => true
+  validates :calendar_url, :presence => true
+
   require 'calendar'
   def calendar
-    Calendar.new open(
-    'https://www.google.com/calendar/ical/p83q5k8rgf52f6ifsfq9tlir28%' +
-    '40group.calendar.google.com/public/basic.ics'
-    )
+    Calendar.new open(calendar_url)
   end
 
   def teammates_on_duty
