@@ -142,9 +142,8 @@ table th {
 table td, table th {
   padding: 2px; }
 
-td a {
-  color: none !important;
-  background-color: none !important;
-  text-decoration: none !important;
+a img, a:hover img {
   border: none !important;
-  outline: none !important; }
+  display: block;
+  margin: 0;
+  padding: 0; }

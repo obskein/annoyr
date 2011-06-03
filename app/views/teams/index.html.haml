@@ -5,9 +5,9 @@
   - @teams.each do |team|
     %tr
       %td= team.name
-      %td= link_to image_tag('add.png'), team
-      %td= link_to image_tag('edit.png'), edit_team_path(team)
-      %td= link_to image_tag('delete.png'), team, :confirm => 'Are you sure?', :method => :delete
+      %td.action= link_to image_tag('add.png'), team
+      %td.action= link_to image_tag('edit.png'), edit_team_path(team)
+      %td.action= link_to image_tag('delete.png'), team, :confirm => 'Are you sure?', :method => :delete
 %br
 = link_to 'New Team', new_team_path
 

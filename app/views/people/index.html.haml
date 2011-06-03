@@ -5,8 +5,8 @@
   - @people.each do |person|
     %tr
       %td= person.name
-      %td= link_to image_tag('add.png'), person
-      %td= link_to image_tag('edit.png'), edit_person_path(person)
-      %td= link_to image_tag('delete.png'), person, :confirm => 'Are you sure?', :method => :delete
+      %td.action= link_to image_tag('add.png'), person
+      %td.action= link_to image_tag('edit.png'), edit_person_path(person)
+      %td.action= link_to image_tag('delete.png'), person, :confirm => 'Are you sure?', :method => :delete
 %br/
 = link_to 'New Person', new_person_path
