@@ -65,12 +65,26 @@ body {
 .content {
   margin-left: 10px; }
   .content .api-sample {
-    margin: 10px; }
-  .content .new {
-    margin: 10px; }
-    .content .new img {
-      vertical-align: bottom;
-      display: inline; }
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #999999;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 2px solid #cccccc;
+    -webkit-box-shadow: 0px 2px 2px #666666;
+    -moz-box-shadow: 0px 2px 2px #666666;
+    box-shadow: 0px 2px 2px #666666; }
+
+.new img {
+  vertical-align: bottom;
+  display: inline; }
+
+.api-sample, .footer {
+  font-size: 0.8em; }
 
 .footer {
   margin: 10px;
