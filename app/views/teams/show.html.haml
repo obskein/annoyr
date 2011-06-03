@@ -2,6 +2,11 @@
 %p
   %b Name:
   = @team.name
+
+- @team.people.each do |person|
+  .member
+    = person.name
+
 = link_to 'Edit', edit_team_path(@team)
 |
 \#{link_to 'Back', teams_path}

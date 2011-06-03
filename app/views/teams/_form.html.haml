@@ -1,4 +1,6 @@
+
 = semantic_form_for(@team) do |f|
+
   - if @team.errors.any?
     #error_explanation
       %h2
@@ -7,6 +9,10 @@
       %ul
         - @team.errors.full_messages.each do |msg|
           %li= msg
+
   = f.inputs :name, :people
+
+  = link_to 'Add more people', new_person_path
+
   .actions
     = f.submit

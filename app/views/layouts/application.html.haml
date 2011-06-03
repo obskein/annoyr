@@ -3,7 +3,19 @@
   %head
     %title Annoyr
     = stylesheet_link_tag :all
+    = stylesheet_link_tag 'scaffold'
+
+
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
-    = yield
+    .header
+      %h1 Annoyr
+      %h2 We need a guy to do that thing with the stuff
+      %nav
+        = link_to 'Teams', teams_path
+        = link_to 'People', people_path
+    .content
+      = yield
+    .footer
+      Ping yo shizzle
