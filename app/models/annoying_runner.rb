@@ -7,7 +7,7 @@ class AnnoyingRunner
 
       tick!
       # scheduler.cron '0 7 * * *' do
-      scheduler.every '5s' do
+      scheduler.every '1m' do
 
         # every day at 7:00am
         tick!

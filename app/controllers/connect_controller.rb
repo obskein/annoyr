@@ -1,4 +1,3 @@
-require 'twitter_interface'
 class ConnectController < ApplicationController
   def show
     request_token = client.request_token(
