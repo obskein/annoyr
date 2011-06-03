@@ -141,3 +141,10 @@ table th {
   text-align: left; }
 table td, table th {
   padding: 2px; }
+
+td a {
+  color: none !important;
+  background-color: none !important;
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important; }
