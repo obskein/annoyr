@@ -20,9 +20,13 @@ class Team < ActiveRecord::Base
     end
   end
 
+  def annoy_time
+    Time.now.to_s(:short)[1..-1] if Time.now.to_s(:short) =~ /^0/
+  end
+
   def annoying_message
     is_or_are = people_on_call.size > 1 ? "are" : "is"
-    "#{people_on_call.to_sentence} #{is_or_are} on call for #{name}!"
+    "#{people_on_call.to_sentence} #{is_or_are} on call for #{name} on #{annoy_time}!"
   end
 
   def annoy!
