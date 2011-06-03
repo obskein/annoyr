@@ -10,8 +10,9 @@
     = csrf_meta_tag
   %body
     .header
-      %h1 Annoyr
-      %h2 We need a guy to do that thing with the stuff
+      %h1
+        %img{:src => 'images/logo.png', :title => 'Annoyr'}
+        %span.subtitle We need a guy to do that thing with the stuff
       %nav
         = link_to 'Teams', teams_path
         = link_to 'People', people_path
