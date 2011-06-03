@@ -18,9 +18,9 @@ body {
   background: linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
   border-bottom: 2px solid #999999;
   color: white;
-  -webkit-box-shadow: 0px 4px 8px #666666;
-  -moz-box-shadow: 0px 4px 8px #666666;
-  box-shadow: 0px 4px 8px #666666; }
+  -webkit-box-shadow: 0px 2px 2px #666666;
+  -moz-box-shadow: 0px 2px 2px #666666;
+  box-shadow: 0px 2px 2px #666666; }
   .header .subtitle {
     font-weight: normal;
     font-size: 0.5em;
@@ -32,13 +32,12 @@ body {
     margin-right: -12px; }
   .header nav {
     position: absolute;
-    left: 410px;
+    left: 400px;
     top: 70px; }
-    .header nav a:link {
+    .header nav a {
       background-color: #666666;
       color: white;
       padding: 5px 5px;
-      margin-right: 5px;
       text-decoration: none;
       -webkit-border-top-left-radius: 5px;
       -webkit-border-top-right-radius: 5px;
@@ -61,16 +60,29 @@ body {
     .header nav a:hover {
       color: red; }
     .header nav a:active {
-      color: white; }
+      color: red; }
     .header nav a:visited {
       color: white; }
+    .header nav .twitter_link {
+      background-color: #ff2123; }
 
 .content {
   margin-left: 10px; }
 
 .footer {
   margin: 10px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  background-color: #666666;
+  color: white;
+  padding: 5px 5px;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #999999;
+  -webkit-box-shadow: 0px 2px 2px #666666;
+  -moz-box-shadow: 0px 2px 2px #666666;
+  box-shadow: 0px 2px 2px #666666; }
 
 body {
   background-color: white;
