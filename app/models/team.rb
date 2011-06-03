@@ -3,10 +3,11 @@ class Team < ActiveRecord::Base
   has_many :people, :through => :team_members
 
   def annoy!
+    puts "Annoyed #{name}!"
   end
 
   def self.annoy_all!
-    Teams.all.each do |team|
+    Team.all.each do |team|
       team.annoy!
     end
   end
