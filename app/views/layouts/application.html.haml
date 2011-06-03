@@ -9,14 +9,14 @@
   %body
     .header
       %h1
-        %img{:src => 'images/logo.png', :title => 'Annoyr'}
+        %img{:src => '/images/logo.png', :title => 'Annoyr'}
         %span.subtitle We need a guy to do that thing with the stuff
       %nav
         = link_to 'Teams', teams_path
         = link_to 'People', people_path
-        = link_to "Connect twitter! (#{GlobalAccountSetting.twitter_on?})", connect_path
-        = link_to 'Global Account Settings', global_account_settings_path
-        = link_to 'annoyr (@annoyrbot) on twitter', "http://twitter.com/#!/annoyrbot"
+        = link_to "Connect Twitter! (#{GlobalAccountSetting.twitter_on?})", connect_path
+        = link_to 'Settings', global_account_settings_path
+        = link_to '@annoyrbot', "http://twitter.com/#!/annoyrbot", :class => 'twitter_link'
     .content
       = yield
     .footer
