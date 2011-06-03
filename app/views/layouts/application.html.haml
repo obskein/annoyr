@@ -3,7 +3,9 @@
   %head
     %title Annoyr
     = stylesheet_link_tag :all, 'scaffold', 'formtastic', 'formtastic_changes'
-    = javascript_include_tag :defaults, 'jquery', 'application'
+    = javascript_include_tag 'jquery'
+    = javascript_tag 'jQuery.noConflict()'
+    = javascript_include_tag :defaults, 'application'
     = csrf_meta_tag
   %body
     .header
@@ -13,10 +15,18 @@
       %nav
         = link_to 'Teams', teams_path
         = link_to 'People', people_path
-        = link_to "Connect Twitter! (#{GlobalAccountSetting.twitter_on?})", connect_path, :confirm => 'This will ovveride the current twitter account. Are you SURE you want to annoy using this account?! Really sure?!'
+        = link_to "Connect Twitter! (#{GlobalAccountSetting.twitter_on?})", connect_path, :confirm => 'This will overide the current twitter account!!!! Are you SURE you want to annoy using this account?! Really sure?!'
         = link_to 'Settings', global_account_settings_path
         = link_to '@annoyrbot', "http://twitter.com/#!/annoyrbot", :class => 'twitter_link'
     .content
       = yield
+
+    .api-sample
+      = form_tag '/api' do
+        Try the API!!!!!
+        = text_field "annoying", "message"
+        = submit_tag "ANNOY"
+        \!!!!
+
     .footer
       Ping yo shizzle until ite gets /annnnnoyingg!/
