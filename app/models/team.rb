@@ -29,8 +29,12 @@ class Team < ActiveRecord::Base
   end
 
   def annoying_message
-    is_or_are = people_on_call.size > 1 ? "are" : "is"
-    "#{people_on_call.to_sentence} #{is_or_are} on call for #{name} on #{annoy_time}!"
+    if people_on_call.any?
+      is_or_are = people_on_call.size > 1 ? "are" : "is"
+      "#{people_on_call.to_sentence} #{is_or_are} on call for #{name} on #{annoy_time}!"
+    else
+      "WARNING: NO-ONE IS DESIGNATED ON CALL FOR #{name}"
+    end
   end
 
   def annoy!
