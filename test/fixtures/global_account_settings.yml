@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  twitter_request_token: MyString
+  twitter_request_token_secret: MyString
+
+two:
+  twitter_request_token: MyString
+  twitter_request_token_secret: MyString

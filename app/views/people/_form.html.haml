@@ -8,6 +8,6 @@
         - @person.errors.full_messages.each do |msg|
           %li= msg
   
-  = f.inputs :name
+  = f.inputs :name, :email, :twitter_screen_name
   .actions
     = f.submit

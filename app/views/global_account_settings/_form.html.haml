@@ -1,0 +1,19 @@
+= form_for(@global_account_setting) do |f|
+  - if @global_account_setting.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@global_account_setting.errors.count, "error")
+        prohibited this global_account_setting from being saved:
+      %ul
+        - @global_account_setting.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :twitter_request_token
+    %br/
+    = f.text_field :twitter_request_token
+  .field
+    = f.label :twitter_request_token_secret
+    %br/
+    = f.text_field :twitter_request_token_secret
+  .actions
+    = f.submit

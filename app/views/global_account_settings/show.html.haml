@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %b Twitter request token:
+  = @global_account_setting.twitter_request_token
+%p
+  %b Twitter request token secret:
+  = @global_account_setting.twitter_request_token_secret
+= link_to 'Edit', edit_global_account_setting_path(@global_account_setting)
+|
+\#{link_to 'Back', global_account_settings_path}
