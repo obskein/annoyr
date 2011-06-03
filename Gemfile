@@ -1,3 +1,5 @@
+source :rubygems
+
 gem 'formtastic'
 gem 'rails'
 gem 'mysql2'
@@ -7,3 +9,5 @@ gem 'sass'
 gem 'eventmachine'
 gem 'rufus-scheduler'
 gem 'twitter_oauth'
+gem 'icalendar'
+
