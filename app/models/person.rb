@@ -1,4 +1,5 @@
 class Person < ActiveRecord::Base
+  validates :name, :presence => true
   validates :email, :presence => true
   validates :twitter_screen_name, :presence => true
 

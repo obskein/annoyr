@@ -5,9 +5,11 @@ Annoyr::Application.routes.draw do
 
   resources :teams
 
-  root :controller => 'teams', :action => 'index'
+  root :to => 'teams#index'
 
   resource :connect, :controller => 'connect'
+
+  resource :api, :controller => 'api'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

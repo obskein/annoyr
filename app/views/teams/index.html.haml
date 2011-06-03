@@ -13,3 +13,9 @@
       %td= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete
 %br/
 = link_to 'New Team', new_team_path
+
+.api_sample
+  = form_tag '/api' do
+    Try the API:
+    = text_field "annoying", "message"
+    = submit_tag "ANNOY"
