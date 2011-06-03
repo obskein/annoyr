@@ -5,7 +5,7 @@ Annoyr::Application.routes.draw do
 
   resources :teams
 
-  root :controller => "people", :action => 'index'
+  root :controller => 'teams', :action => 'index'
 
   resource :connect, :controller => 'connect'
 
