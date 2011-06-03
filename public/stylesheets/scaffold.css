@@ -135,3 +135,9 @@ div.field, div.actions {
   #error_explanation ul li {
     font-size: 12px;
     list-style: square; }
+
+table th {
+  background-color: #cccccc;
+  text-align: left; }
+table td, table th {
+  padding: 2px; }
