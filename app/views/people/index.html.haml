@@ -1,12 +1,17 @@
-%h1 Listing people
+%h1 People
 %table
   %tr
     %th Name
+    %th Teams
   - @people.each do |person|
     %tr
-      %td= person.name
-      %td= link_to image_tag('add.png'), person
+      %td= link_to person.name
+      %td= person.teams.map( &:name ).to_sentence
       %td= link_to image_tag('edit.png'), edit_person_path(person)
       %td= link_to image_tag('delete.png'), person, :confirm => 'Are you sure?', :method => :delete
 %br/
-= link_to 'New Person', new_person_path
+
+.new
+  = link_to new_person_path do
+    = image_tag('add.png')
+    New Person

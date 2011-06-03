@@ -64,6 +64,12 @@ body {
 
 .content {
   margin-left: 10px; }
+  .content .api-sample {
+    margin: 10px; }
+  .content .new {
+    margin: 10px; }
+    .content .new img {
+      vertical-align: bottom; }
 
 .footer {
   margin: 10px;

@@ -15,7 +15,7 @@
       %nav
         = link_to 'Teams', teams_path
         = link_to 'People', people_path
-        = link_to "Connect Twitter! (#{GlobalAccountSetting.twitter_on?})", connect_path
+        = link_to "Connect Twitter! (#{GlobalAccountSetting.twitter_on?})", connect_path, :confirm => 'This will ovveride the current twitter account. Are you SURE you want to annoy using this account?! Really sure?!'
         = link_to 'Settings', global_account_settings_path
         = link_to '@annoyrbot', "http://twitter.com/#!/annoyrbot", :class => 'twitter_link'
     .content
