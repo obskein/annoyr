@@ -3,10 +3,16 @@
   %b Name:
   = @team.name
 
-- @team.people.each do |person|
-  .member
-    = person.name
+%b Members:
+%ul
+  - @team.people.each do |person|
+    %li.member
+      = link_to person.name, person
 
-= link_to 'Edit', edit_team_path(@team)
+
+= link_to 'Edit team', edit_team_path(@team)
 |
-\#{link_to 'Back', teams_path}
+= link_to 'Back to all teams', teams_path
+|
+= link_to 'Edit Calendar', @team.calendar_url
+

@@ -2,6 +2,19 @@
 %p
   %b Name:
   = @person.name
-= link_to 'Edit', edit_person_path(@person)
+%p
+  %b Twitter screen name:
+  = @person.twitter_screen_name
+%p
+  %b Email:
+  = @person.email
+
+%b Teams:
+%ul
+  - @person.teams.each do |team|
+    %li.team
+      = link_to team.name, team
+
+= link_to 'Edit person', edit_person_path(@person)
 |
-\#{link_to 'Back', people_path}
+= link_to 'Back to all people', people_path
