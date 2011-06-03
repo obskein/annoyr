@@ -20,13 +20,8 @@ body {
   color: white;
   -webkit-box-shadow: 0px 2px 2px #666666;
   -moz-box-shadow: 0px 2px 2px #666666;
-  box-shadow: 0px 2px 2px #666666; }
-  .header .subtitle {
-    font-weight: normal;
-    font-size: 0.5em;
-    letter-spacing: -0.08em;
-    color: white;
-    text-shadow: #333333 0px 1px 1px; }
+  box-shadow: 0px 2px 2px #666666;
+  cursor: pointer; }
   .header img {
     margin-bottom: -17px;
     margin-right: -12px; }
@@ -41,30 +36,31 @@ body {
       text-decoration: none;
       -webkit-border-top-left-radius: 5px;
       -webkit-border-top-right-radius: 5px;
-      -webkit-border-bottom-right-radius: px;
-      -webkit-border-bottom-left-radius: px;
+      -webkit-border-bottom-right-radius: 0px;
+      -webkit-border-bottom-left-radius: 0px;
       -moz-border-radius-topleft: 5px;
       -moz-border-radius-topright: 5px;
-      -moz-border-radius-bottomright: px;
-      -moz-border-radius-bottomleft: px;
+      -moz-border-radius-bottomright: 0px;
+      -moz-border-radius-bottomleft: 0px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-      border-bottom-right-radius: px;
-      border-bottom-left-radius: px;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
       border: 2px solid #999999;
       border-bottom: none;
       font-size: 0.8em;
       -webkit-box-shadow: 0px -2px 2px #222222;
       -moz-box-shadow: 0px -2px 2px #222222;
       box-shadow: 0px -2px 2px #222222; }
-    .header nav a:hover {
-      color: red; }
-    .header nav a:active {
-      color: red; }
-    .header nav a:visited {
-      color: white; }
     .header nav .twitter_link {
       background-color: #ff2123; }
+  .header .subtitle {
+    font-weight: normal;
+    font-size: 0.5em;
+    letter-spacing: -0.08em;
+    color: white;
+    text-shadow: #333333 0px 1px 1px;
+    text-decoration: none; }
 
 .content {
   margin-left: 10px; }
