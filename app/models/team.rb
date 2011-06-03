@@ -1,3 +1,5 @@
+require 'calendar'
+
 class Team < ActiveRecord::Base
   has_many :team_members
   has_many :people, :through => :team_members
@@ -5,13 +7,14 @@ class Team < ActiveRecord::Base
   validates :name, :presence => true
   validates :calendar_url, :presence => true
 
-  require 'calendar'
   def calendar
-    Calendar.new open(calendar_url)
+    Calendar.new open(calendar_url.to_s.strip)
+  rescue Exception => e
+    nil
   end
 
   def teammates_on_duty
-    calendar.teammates_on_duty
+    calendar.try(:teammates_on_duty) || []
   end
 
   def people_on_call

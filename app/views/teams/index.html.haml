@@ -1,17 +1,22 @@
-%h1 Listing teams
+%h1 Teams
 %table
   %tr
     %th Name
+    %th People
   - @teams.each do |team|
     %tr
-      %td= team.name
-      %td.action= link_to image_tag('add.png'), team
+      %td= link_to team.name, team
+      %td= team.people.map( &:name ).to_sentence
       %td.action= link_to image_tag('edit.png'), edit_team_path(team)
       %td.action= link_to image_tag('delete.png'), team, :confirm => 'Are you sure?', :method => :delete
 %br
-= link_to 'New Team', new_team_path
 
-.api_sample
+.new
+  = link_to new_team_path do
+    = image_tag('add.png')
+    New Team
+
+.api-sample
   = form_tag '/api' do
     Try the API:
     = text_field "annoying", "message"
