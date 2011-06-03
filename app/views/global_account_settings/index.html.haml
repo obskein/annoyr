@@ -1,17 +1,11 @@
-%h1 Listing global_account_settings
+%h1 Global account settings
 %table
   %tr
     %th Twitter request token
     %th Twitter request token secret
-    %th
-    %th
-    %th
   - @global_account_settings.each do |global_account_setting|
     %tr
       %td= global_account_setting.twitter_request_token
       %td= global_account_setting.twitter_request_token_secret
-      %td= link_to 'Show', global_account_setting
-      %td= link_to 'Edit', edit_global_account_setting_path(global_account_setting)
-      %td= link_to 'Destroy', global_account_setting, :confirm => 'Are you sure?', :method => :delete
-%br/
-= link_to 'New Global account setting', new_global_account_setting_path
+      %td= link_to image_tag('edit.png', :title => 'Edit settings manually - NOT RECOMMENDED'), edit_global_account_setting_path(global_account_setting)
+      %td= link_to image_tag('destroy.png', :title => 'Reset all settings to default'), global_account_setting, :confirm => 'Are you sure?', :method => :delete
