@@ -1,4 +1,10 @@
 Annoyr::Application.routes.draw do
+  resources :people
+
+  resources :teams
+
+  root :controller => "people", :action => 'index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,12 @@
+= semantic_form_for(@team) do |f|
+  - if @team.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@team.errors.count, "error")
+        prohibited this team from being saved:
+      %ul
+        - @team.errors.full_messages.each do |msg|
+          %li= msg
+  = f.inputs :name, :people
+  .actions
+    = f.submit

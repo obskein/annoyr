@@ -1,1 +1,5 @@
+gem 'formtastic'
 gem 'rails'
+gem 'mysql2'
+gem 'mongrel'
+gem 'haml'
