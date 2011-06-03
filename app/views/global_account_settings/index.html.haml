@@ -7,5 +7,5 @@
     %tr
       %td= global_account_setting.twitter_request_token
       %td= global_account_setting.twitter_request_token_secret
-      %td= link_to image_tag('edit.png', :title => 'Edit settings manually - NOT RECOMMENDED'), edit_global_account_setting_path(global_account_setting)
-      %td= link_to image_tag('delete.png', :title => 'Reset all settings to default'), global_account_setting, :confirm => 'Are you sure?', :method => :delete
+      %td.action= link_to image_tag('edit.png', :title => 'Edit settings manually - NOT RECOMMENDED'), edit_global_account_setting_path(global_account_setting)
+      %td.action= link_to image_tag('delete.png', :title => 'Reset all settings to default'), global_account_setting, :confirm => 'Are you sure?', :method => :delete

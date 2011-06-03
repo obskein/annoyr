@@ -5,10 +5,10 @@
     %th Teams
   - @people.each do |person|
     %tr
-      %td= link_to person.name
+      %td= link_to person.name, person
       %td= person.teams.map( &:name ).to_sentence
-      %td= link_to image_tag('edit.png'), edit_person_path(person)
-      %td= link_to image_tag('delete.png'), person, :confirm => 'Are you sure?', :method => :delete
+      %td.action= link_to image_tag('edit.png'), edit_person_path(person)
+      %td.action= link_to image_tag('delete.png'), person, :confirm => 'Are you sure?', :method => :delete
 %br/
 
 .new
