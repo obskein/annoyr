@@ -2,9 +2,12 @@ body {
   padding: 0;
   margin: 0; }
 
+.main {
+  margin: 0 20%; }
+
 .header {
   position: relative;
-  padding: 10px;
+  padding: 10px 20% 10px 20%;
   padding-bottom: 0;
   margin-top: -10px;
   margin-bottom: 30px;
@@ -27,8 +30,9 @@ body {
     margin-right: -12px; }
   .header nav {
     position: absolute;
-    left: 400px;
-    top: 70px; }
+    right: 20%;
+    top: 70px;
+    margin-right: 10px; }
     .header nav a {
       background-color: #666666;
       color: white;
@@ -64,31 +68,38 @@ body {
 
 .content {
   margin-left: 10px; }
-  .content .api-sample {
-    margin-top: 20px;
-    margin-right: 10px;
-    background-color: #999999;
-    color: white;
-    padding: 5px 5px;
-    text-decoration: none;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: 2px solid #cccccc;
-    -webkit-box-shadow: 0px 2px 2px #666666;
-    -moz-box-shadow: 0px 2px 2px #666666;
-    box-shadow: 0px 2px 2px #666666; }
+  .content table {
+    width: 95%;
+    margin: 0 auto; }
+    .content table .action {
+      width: 18px; }
 
-.new img {
-  vertical-align: bottom;
-  display: inline; }
+.api-sample {
+  background-color: #999999;
+  color: white;
+  padding: 5px 5px;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #cccccc;
+  -webkit-box-shadow: 0px 2px 2px #666666;
+  -moz-box-shadow: 0px 2px 2px #666666;
+  box-shadow: 0px 2px 2px #666666; }
+
+.new {
+  margin: 0 auto;
+  text-align: center; }
+  .new img {
+    vertical-align: bottom;
+    display: inline; }
 
 .api-sample, .footer {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  margin: 10px;
+  margin-top: 20px; }
 
 .footer {
-  margin: 10px;
-  margin-top: 20px;
   background-color: #666666;
   color: white;
   padding: 5px 5px;

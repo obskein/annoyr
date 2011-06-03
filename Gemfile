@@ -10,4 +10,6 @@ gem 'eventmachine'
 gem 'rufus-scheduler'
 gem 'twitter_oauth'
 gem 'icalendar'
+gem 'pony'
+gem 'sms_fu'
 

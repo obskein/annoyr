@@ -18,15 +18,17 @@
         = link_to "Connect Twitter! (#{GlobalAccountSetting.twitter_on?})", connect_path, :confirm => 'This will overide the current twitter account!!!! Are you SURE you want to annoy using this account?! Really sure?!'
         = link_to 'Settings', global_account_settings_path
         = link_to '@annoyrbot', "http://twitter.com/#!/annoyrbot", :class => 'twitter_link'
-    .content
-      = yield
+    .main
+      .content
+        = yield
 
-    .api-sample
-      = form_tag '/api' do
-        Try the API!!!!!
-        = text_field "annoying", "message"
-        = submit_tag "ANNOY"
-        \!!!!
+      .footer
+        Ping yo shizzle until ite gets /annnnnoyingg!/
 
-    .footer
-      Ping yo shizzle until ite gets /annnnnoyingg!/
+      .api-sample
+        = form_tag '/api' do
+          Try the API!!!!!
+          = text_field "annoying", "message"
+          = submit_tag "ANNOY"
+          \!!!!
+

@@ -41,6 +41,12 @@ class Team < ActiveRecord::Base
 
     Rails.logger.debug annoying_message
     TwitterInterface.tweet! annoying_message
+
+    sms_fu = SMSFu::Client.configure(:delivery => :action_mailer)
+
+    raise 'needs a phone number'
+    sms_fu.deliver("","at&t",annoying_message)
+
   end
 
   def self.annoy_all!

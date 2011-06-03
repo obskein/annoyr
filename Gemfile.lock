@@ -59,6 +59,8 @@ GEM
     mysql2 (0.2.7)
     oauth (0.4.4)
     polyglot (0.3.1)
+    pony (1.2)
+      mail (> 2.0)
     rack (1.2.3)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -81,6 +83,7 @@ GEM
     rufus-scheduler (2.0.8)
       tzinfo (>= 0.3.23)
     sass (3.1.1)
+    sms_fu (1.1.2)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
@@ -100,7 +103,9 @@ DEPENDENCIES
   icalendar
   mongrel
   mysql2
+  pony
   rails
   rufus-scheduler
   sass
+  sms_fu
   twitter_oauth
