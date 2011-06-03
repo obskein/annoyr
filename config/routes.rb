@@ -1,9 +1,13 @@
 Annoyr::Application.routes.draw do
+  resources :global_account_settings
+
   resources :people
 
   resources :teams
 
   root :controller => "people", :action => 'index'
+
+  resource :connect, :controller => 'connect'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

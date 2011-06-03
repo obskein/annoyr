@@ -8,4 +8,6 @@ gem 'haml'
 gem 'sass'
 gem 'eventmachine'
 gem 'rufus-scheduler'
+gem 'twitter_oauth'
 gem 'icalendar'
+

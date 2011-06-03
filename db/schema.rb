@@ -10,12 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110603162245) do
+ActiveRecord::Schema.define(:version => 20110603174350) do
+
+  create_table "global_account_settings", :force => true do |t|
+    t.string   "twitter_request_token"
+    t.string   "twitter_request_token_secret"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "people", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
+    t.string   "twitter_screen_name"
   end
 
   create_table "team_members", :force => true do |t|
