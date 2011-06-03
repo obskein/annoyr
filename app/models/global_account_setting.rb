@@ -3,7 +3,8 @@ class GlobalAccountSetting < ActiveRecord::Base
   class << self
 
     def twitter_on?
-      main_settings.twitter_request_token? && main_settings.twitter_request_token_secret?
+      return "Connected" if main_settings.twitter_request_token? && main_settings.twitter_request_token_secret?
+      "Disconnected"
     end
 
     def main_settings
