@@ -15,8 +15,9 @@ class Team < ActiveRecord::Base
   end
 
   def people_on_call
-    @people_on_call ||= teammates_on_duty.map do |teammate|
-      Person.find_by_email(teammate).try(:name) || teammate
+    @people_on_call ||= teammates_on_duty.map do |email|
+      person = Person.find_by_email(email)
+      person ? "@#{person.twitter_screen_name}" : email
     end
   end
 
