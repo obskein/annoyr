@@ -6,13 +6,12 @@ class AnnoyingRunner
       scheduler = Rufus::Scheduler.start_new
 
       tick!
+      # every day at 7:00am
       # scheduler.cron '0 7 * * *' do
-      scheduler.every '1m' do
-
-        # every day at 7:00am
+      
+      scheduler.every '5m' do
         tick!
       end
-        
     end
   end
 
