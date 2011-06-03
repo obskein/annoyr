@@ -13,8 +13,6 @@ class AnnoyingRunner
         tick!
       end
         
-      scheduler.every '1s' do
-      end
     end
   end
 
